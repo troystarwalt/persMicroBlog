@@ -1,0 +1,13 @@
+<h1>Posts#index</h1>
+<p> <%= link_to "Throw your own.", posts_new_path %>
+
+	<div id="list_of_throws">
+		<% @post.reverse.each do |c| %>
+	    <p class="show_latest_throws">The Throw with 
+	    <%= c.id %> 
+	    said 
+	    <%= c.content %> on 
+	    <%= c.created_at %>
+	    </p>
+	    <% end %>
+	</div>

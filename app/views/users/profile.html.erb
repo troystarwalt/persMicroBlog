@@ -1,0 +1,22 @@
+<h1>Users#profile</h1>
+<p>Find me in app/views/users/profile.html.erb</p>
+
+<% if @user %>
+	<p>
+		You are logged in! Hi <%= @user.fname %>
+	</p>
+<% else %>
+	<p>
+		Sorry I don't know who you are. Please <%= link_to '/login' %>.
+	</p>
+<% end %>
+
+Bio: <%= @user.bio %>
+
+<p>
+<%= link_to("delete", user_path(@user.id), method: :delete)%>
+</p>
+
+<p>
+	<%= link_to("edit", edit_user_path(@user.id)) %>
+</p>
