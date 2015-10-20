@@ -1,21 +1,20 @@
 class PostsController < ApplicationController
+  def index
+  	@user = User.all
+  	@post = Post.all
+  end
+
   def new
-  	@post = Post.new
-    # Post.create({:content => params[:user_content], :user_id => session[:user_id]})
+    @post = Post.new
   end
 
   def create
-    results = Post.create({:content => params[:user_post], user_id: session[:user_id]})
-  	if result
-  		redirect_to posts_index_path result
-  	else
-      flash[:notice] = "Try again."
-  		redirect_to('/post/new')
-  	end
-  end
-
-  def index
-  	@user = User.all
-  	@post = Post.last(10)
+    puts "TROY>>>>>>>>> #{params.inspect}"
+    puts "TROY>>>>>>>>> #{session[:user_id]}"
+    @post = Post.create(
+      :content => params[:content], 
+      :user_id => session[:user_id]
+    )
+    redirect_to posts_path
   end
 end

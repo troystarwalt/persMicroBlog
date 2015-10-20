@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get '/profile' => 'users#show'
 
-  get 'users/show' => 'users#view'
+  # get 'users/show' => 'users#view'
 
   get 'users/edit'
 
