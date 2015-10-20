@@ -3,14 +3,22 @@ class UsersController < ApplicationController
   	@user = User.new
   end
 
+  def create
+    result = User.create(params[:user])
+      if result
+        redirect_to user_path result
+      else
+      redirect_to "/users"
+    end
+  end
+
   # def profile
   #   @user = User.find_by(id: session[:user_id])
   # end
 
   def show
-  	  	puts "Calling users#show with #{params[:id]}"
-  		@user = User.find_by(id: session[:user_id])
-  end
+  		@user = User.find(params[:id])
+  end 
 
   def edit
   	@user = User.find(params[:id])
@@ -21,16 +29,7 @@ class UsersController < ApplicationController
   	@posts = Post.all
   end
 
-  def create
-    result = User.create(params[:user])
-      if result
-        redirect_to user_profile_path result
-      else
-      redirect_to "/users"
-    end
-  end
-
-   def update
+  def update
     @user = User.find(params[:id])
     @user.update(params[:user])
       redirect_to @user

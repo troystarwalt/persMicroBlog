@@ -1,12 +1,10 @@
 <h1>Throw Something</h1>
 <div>
-<%= form_for :posts do |f| %>
- 
+<%= form_for :posts do |f| %> 
   <p>
     <%= f.label :Throw, class: 'font_throw' %><br>
-    <%= f.text_area :text, class: 'throw_area' %>
-  </p>
- 
+    <%= f.text_area :content, class: 'throw_area' %>
+  </p> 
   <p>
     <%= f.submit :throw, class: 'throw_button' %>
   </p>  

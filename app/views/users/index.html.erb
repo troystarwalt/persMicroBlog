@@ -1,14 +1,8 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>See all of our lovely Throw users.</h1>
 
 <% @users.each do |user| %>
-<p><%= user.username %></p><p><%= user.created_at %></p>
+<p>Username:  <%= user.username %></p>
+<p>Date Created:  <%= user.created_at %></p>
+<p>Number of Throws:  <%= user.posts.count %></p>
 <hr>
 <% end %>
-
-<% @posts.each do |post| %>
-<p><%= post.content %></p>
-<hr>
-<% end %>
-
-

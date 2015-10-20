@@ -1,27 +1,30 @@
 == README
+Check List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SESSION
+Login: Working
+Logout: Working
 
-Things you may want to cover:
+USER
+User Edit: Working
+User Delete: Working
+User Signup: Broke
+User List: Working
+User View Other Profile: Need to find a way to view other user ids
 
-* Ruby version
+POST
+Posting: Broke
+Post List: Working
 
-* System dependencies
+HOME
+About Page: Need to Create
+Contact Page: Need to Create
 
-* Configuration
+ADDITIOAL TO DO's
+Update Navigation
+Add additional content
+Add photos
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
