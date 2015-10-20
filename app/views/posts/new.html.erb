@@ -1,16 +1,5 @@
 <h1>Throw Something</h1>
 <div>
-<%= form_for @post do |f| %> 
-  <p>
-    <%= f.label :Throw, class: 'font_throw' %>
-    <br>
-    <%= f.text_area :content, class: 'throw_area' %>
-  </p> 
-  <p>
-    <%= f.submit :Throw, class: 'throw_button' %>
-  </p>  
-<% end %>
-
 <%= form_tag(posts_path, method: 'post') do %> 
   <p>
     <%= label_tag('content', '', class: 'font_throw') %>
