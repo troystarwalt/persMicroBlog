@@ -21,8 +21,6 @@
 #8D99AE: bottom border of td;
 */
 
-
-
 html, body {
 	margin: 0px;
 	height: 100%;
@@ -103,16 +101,6 @@ hr {
 }
 
 .throw_area {
-    width: 430px;
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid #2B2D42;
-    background-color: rgba(43, 45, 66, .01);
-    color: #EDF2F3;
-    font-size: 1em;
-}
-
-textarea.throw_area{
 	resize: none;
     width: 425px;
     height: 100px;
@@ -121,6 +109,7 @@ textarea.throw_area{
     background-color: rgba(43, 45, 66, 0.5);
     color: #EDF2F3;
     font-size:1.2em;
+    padding-bottom: 0px;
 }
 
 .throw_button {
@@ -155,6 +144,7 @@ td {
 	border-bottom: 1px solid #8D99AE;
 }
 
+
 #content {
 	padding-bottom: 150px;
 }
@@ -162,6 +152,47 @@ td {
 #main_content {
 	padding: 0 10px;
 }
+
+
+/*label*/
+.font_throw {
+	font-size: 2em;
+	font-weight: 400;
+}
+
+
+.throw_area {
+	resize: none;
+    width: 425px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #2B2D42;
+    background-color: rgba(43, 45, 66, 0.5);
+    color: #EDF2F3;
+    font-size:1.2em;
+    padding-bottom: 0px;
+}
+
+.throw_button {
+	width: 430px;
+	text-align: center;
+	font-family: "fira-sans-2", Century-Gothic, sans-serif;
+	color: #2B2D42;
+}
+
+#list_of_throws {
+	width: 420px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.show_latest_throws {
+	border: 1px solid #EDF2F4;
+	background-color: #8D99AE;
+	color: #EDF2F3;
+	padding: 2px;
+}
+
 
 /*footer stuff*/
 
