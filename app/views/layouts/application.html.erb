@@ -50,9 +50,9 @@
 						</div>
 						<div id="otherlinks">
 							<ul id="footernav">
-								<li><a href="home/about" class="otherlinksa">About</a></li>
-								<li><a href="home/about" class="otherlinksa">Contact</a></li>
-								<li><a href="/logout" class="otherlinksa">Logout</a></li>
+								<li><%= link_to 'About', home_about_path,  class: "otherlinksa" %></li>
+								<li><%= link_to 'Contact', home_contact_path, class: 'otherlinksa' %></li>
+								<li><%= link_to 'Logout', logout_path, class: 'otherlinksa' %></li>
 							</ul>
 						</div>
 					</div>		
