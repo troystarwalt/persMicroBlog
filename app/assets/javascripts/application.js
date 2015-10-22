@@ -14,3 +14,9 @@
 // = require jquery_ujs
 // = require turbolinks
 // = require_tree .
+$(document).ready(function () {
+    var back = ["#2B2D42", "#EDF2F3", "#8D99AE", "#6A8D92"];
+    var rand = back[Math.floor(Math.random() * back.length)];
+    console.log(rand);
+    $('span.hcolor').css('color',rand);
+    })

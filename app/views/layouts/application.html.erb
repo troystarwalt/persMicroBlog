@@ -11,7 +11,7 @@
 <body>
 	<header>
 	<div id="top_bar">
-		<h1 id="main_header">T<span id="hcolor">h</span>row</h1>
+		<h1 id="main_header">T<span class="hcolor">h</span>row</h1>
 	</div>
 	</header>
 		<div id="wrapper">
@@ -19,16 +19,16 @@
 			<div id="pattern" class="pattern">		
 				<nav>
 					<ul class="navigation" role="navigation">					
-						<li><a href="/home/index">Home</a></li>
-						<li><%= link_to 'Throw', posts_path %></li>
-						<li><a href="/users">See Other Users</a></li>
-						<li><a href="/profile">Profile</a></li>
-						<li><a href="/users/new">Sign Up</a></li>
-						<li><a href="/login">Login</a></li>
-						<li><a href="/logout">Logout</a></li>					
+						<li><a href="/home/index" class="navlink">Home</a></li>
+						<li><%= link_to 'Throw', posts_path, class: 'navlink' %></li>
+						<li><a href="/users" class="navlink">See Other Users</a></li>
+						<li><a href="/profile" class="navlink">Profile</a></li>
+						<li><a href="/users/new" class="navlink">Sign Up</a></li>
+						<li><a href="/login" class="navlink">Login</a></li>				
 					</ul>	
 				</nav>
 			</div>
+			<div></div>
 				<hr>
 				<article id="main_content">
 				<p class="flash_notice">
@@ -47,6 +47,13 @@
 						<div id="copyright">
 							<span>&copy; Trox</span>
 							<span>All Rights Reserved</span>
+						</div>
+						<div id="otherlinks">
+							<ul id="footernav">
+								<li><a href="home/about" class="otherlinksa">About</a></li>
+								<li><a href="home/about" class="otherlinksa">Contact</a></li>
+								<li><a href="/logout" class="otherlinksa">Logout</a></li>
+							</ul>
 						</div>
 					</div>		
 				</footer>

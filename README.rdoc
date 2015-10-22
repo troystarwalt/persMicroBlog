@@ -8,13 +8,14 @@ Logout: Working
 USER
 User Edit: Working
 User Delete: Working
-User Signup: Broke
+User Signup: Working
 User List: Working
 User View Other Profile: Need to find a way to view other user ids
 
 POST
-Posting: Broke
+Posting: Working
 Post List: Working
+Overall: Need verificatino to make sure psts aren't empty.
 
 HOME
 About Page: Need to Create
@@ -23,7 +24,7 @@ Contact Page: Need to Create
 ADDITIOAL TO DO's
 Update Navigation
 Add additional content
-Add photos
+Add photos [x]
 
 
 

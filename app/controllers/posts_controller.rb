@@ -14,6 +14,6 @@ class PostsController < ApplicationController
       :content => params[:content], 
       :user_id => session[:user_id]
     )
-    redirect_to post_path
+    redirect_to posts_path(@post)
   end
 end

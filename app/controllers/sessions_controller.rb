@@ -7,16 +7,18 @@ class SessionsController < ApplicationController
       email: params[:email], password: params[:password]).first
     if result
       session[:user_id] = result.id
+      flash[:notice] = "You have logged in!"
       redirect_to user_path result
     else
-      flash[:alert] = "Invalid login/password. Please try again."
+      flash[:notice] = "Invalid login/password. Please try again."
       redirect_to "/login"
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to "/users"
+    flash[:notice] = "You have logged out."
+    redirect_to users_path
   end
 
 end

@@ -41,9 +41,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :fname, :email, :password, :bio)
   end
 
-  def destroy
-  	@gone = User.find(params[:id])
-    @gone.destroy
-  end
-
 end
