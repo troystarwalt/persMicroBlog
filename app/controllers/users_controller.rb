@@ -4,12 +4,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-      if @user.save
-        
+    result = User.create(user_params)
+      if result
+        redirect_to user_path result
       else
-      flash[:notice] = "You messed up."
-      render 'new'
+      redirect_to "/users"
     end
   end
 
@@ -38,7 +37,9 @@ class UsersController < ApplicationController
 
 # 'strong_paramaters', this allows the following fields to pass through the create() method.
 
-  def person_params
+  private
+
+  def user_params
     params.require(:user).permit(:username, :fname, :email, :password, :bio)
   end
 
