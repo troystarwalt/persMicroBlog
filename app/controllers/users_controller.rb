@@ -4,11 +4,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    result = User.create(user_params)
-      if result
-        redirect_to user_path result
+    @user = User.create(user_params)
+      if @user.save
+        redirect_to user_path(@user)
       else
-      redirect_to "/users"
+      redirect_to new_user_path
     end
   end
 
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
   		@user = User.find_by(id: session[:user_id])
+
   end 
 
   def edit
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
   def index
   	@users = User.all
   	@posts = Post.all
+
   end
 
   def update
